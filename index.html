@@ -32,7 +32,34 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
+ <!--
+    Responsive Images
+    scale to fit browser size
+    css width property set to 100%, scale-up and -down responsive image
+    width:100%, image scales bigger than original size
+    max-width:100%, image never scales bigger than original size
+ -->
+ <img src="./images/img_girl_big.jpg" style="width:100%;"> 
+ <img src="./images/img_girl.jpg" style="max-width:100%;height:auto;"> 
+   
+   <h2>Show Different Images Depending on Browser Width</h2>
+<p>Resize the browser width and the image will change at 600px and 1500px.</p>
 
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+
+<h1 style="font-size:10vw;">Responsive Text</h1>
+
+<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+
+<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
 <p>Lorem ipsum<br>Lorem ipsum dolor.</p>
 
 <table style="width:100%">
@@ -137,7 +164,7 @@ culpa qui officia deserunt mollit anim id est laborum.
 
 <h2>Xxxx xxx</h2>
 
-<img src="ellipse.gif" alt="ellipse.se" width="104" height="142">
+<img src="./images/ellipse.gif" alt="ellipse.se" width="104" height="142">
 
 <h2>Xx Xxxxx Xxx Xxxx</h2>
 
