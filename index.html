@@ -4,8 +4,9 @@
     <title>Page Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <!-- This is a comment 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" href="css/blog-post.css">
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
@@ -21,17 +22,40 @@
           padding: 5px;
           text-align: left;
         }
+        p {
+            font-size:1.2vw;
+        }
+
     </style>
+
 </head>
 
-<body style="background-color:powderblue;">
-<!-- This is a comment -->
+<!--<body style="background-color:powderblue;"> -->
+<body class="w3-content" style="max-width:1000px">
+<!-- This is a comment 
+<body class="w3-content" style="max-width:500px">
+-->
 
-<h1 style="background-color:tomato;">Lorem ipsum dolor sit amet</h1>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="w3-container w3-teal">
+  <h1>Lorem ipsum dolor sit amet</h1>
+</div>
+
+<div class="w3-bar w3-green">
+  <div class="w3-bar-item">London</div>
+  <div class="w3-bar-item">Paris</div>
+  <div class="w3-bar-item">Tokyo</div>
+</div> 
+
+<!--<h1 style="background-color:tomato;">Lorem ipsum dolor sit amet</h1>-->
+
+<div class="w3-container">
+<p><span class="w3-tag w3-blue">New!</span>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
+</div>
+
  <!--
     Responsive Images
     scale to fit browser size
@@ -39,23 +63,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     width:100%, image scales bigger than original size
     max-width:100%, image never scales bigger than original size
  -->
- <img src="./images/img_girl_big.jpg" style="width:100%;"> 
+
+ <img src="./images/img_girl_big.jpg" style="width:100%;" alt="Forest" class="w3-opacity-max"> 
+
  <img src="./images/img_girl.jpg" style="max-width:100%;height:auto;"> 
+ <img src="./images/img_girl.jpg" alt="Lights" class="w3-image; w3-grayscale-max"> 
    
    <h2>Show Different Images Depending on Browser Width</h2>
 <p>Resize the browser width and the image will change at 600px and 1500px.</p>
 
 <picture>
-  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
-  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
-  <source srcset="flowers.jpg">
-  <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+  <source srcset="./images/img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="./images/img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="./images/flowers.jpg">
+  <img src="./images/img_flowers.jpg" alt="Flowers" style="width:auto;">
 </picture>
 
 
-<h1 style="font-size:10vw;">Responsive Text</h1>
+<h1 style="font-size:2vw;">Responsive Text</h1>
 
-<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+<p style="font-size:1.2vw;">Resize the browser window to see how the text size scales.</p>
 
 <p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
 
