@@ -1,232 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Page Title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-    <!-- This is a comment 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" href="css/blog-post.css">
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
-    <link rel="stylesheet" href="vendor/fontawesome/css/fontawesome.min.css">
-    -->
-    
-    <style>
-        table, th, td {
-          border: 1px solid white;
-          border-collapse: collapse;
-        }
-        th, td {
-          padding: 5px;
-          text-align: left;
-        }
-        p {
-            font-size:1.2vw;
-        }
-
-    </style>
-
 </head>
 
-<!--<body style="background-color:powderblue;"> -->
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- framework -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+<!-- overriding css -->
+<style>
+    body {font-family:"Times New Roman", serif}
+    h1,h2,h3,h4,h5,h6 {font-family:serif; letter-spacing:5px}
+</style>
+
+<!-- javaspcript -->
+<script src="https://www.w3schools.com/lib/w3.js"></script> 
+
+
 <body class="w3-content" style="max-width:1000px">
-<!-- This is a comment 
-<body class="w3-content" style="max-width:500px">
--->
 
-<div class="w3-container w3-teal">
+<!-- Container-->
+<div class="w3-container w3-white w3-padding-top-64">
   <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </div>
 
-<div class="w3-bar w3-green">
-  <div class="w3-bar-item">London</div>
-  <div class="w3-bar-item">Paris</div>
-  <div class="w3-bar-item">Tokyo</div>
+
+<!-- Navigation (Sits on top) -->
+<div class="w3-top w3-bar w3-white w3-padding w3-card w3-wide" style="max-width:1000px">
+    <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+</div>
+
+
+
+<!-- bar -->
+<div class="w3-bar w3-yellow">
+  <div class="w3-bar-item">Lorem</div>
+  <div class="w3-bar-item">Lorem</div>
+  <div class="w3-bar-item">Lorem</div>
 </div> 
 
-<!--<h1 style="background-color:tomato;">Lorem ipsum dolor sit amet</h1>-->
 
+<!-- Container-->
+<div class="w3-container w3-white">
+    <p><span class="w3-tag w3-blue">New!</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
+
+ <img src="./images/img_girl_big.jpg" style="max-width:100%;" alt="Forest" class="w3-opacity-max"> 
+
+
+<!-- responsiveness -->
 <div class="w3-container">
-<p><span class="w3-tag w3-blue">New!</span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+    <p>Resize the page to see the responsive effect:</p>
+    
+    <div class="w3-row">
+      <div class="w3-third">
+        <img src="./images/flowers.jpg" alt="Name1" style="width:100%">
+      </div>
+      <div class="w3-third">
+        <img src="./images/flowers.jpg" alt="Name2" style="width:100%">
+      </div>
+      <div class="w3-third">
+        <img src="./images/flowers.jpg" alt="Name3" style="width:100%">
+    </div>
 </div>
 
- <!--
-    Responsive Images
-    scale to fit browser size
-    css width property set to 100%, scale-up and -down responsive image
-    width:100%, image scales bigger than original size
-    max-width:100%, image never scales bigger than original size
- -->
+<!-- card -->
+<div class="w3-card" style="width:200px">
+  <img src="./images/flowers.jpg" style="width:100%">
+  <div class="w3-container w3-center">
+    <p class="w3-xlarge">John Doe</p>
+    <p>Engineer</p>
+  </div>
+</div>
 
- <img src="./images/img_girl_big.jpg" style="width:100%;" alt="Forest" class="w3-opacity-max"> 
+<!-- two columns responsive -->
+<div class="w3-row">
 
- <img src="./images/img_girl.jpg" style="max-width:100%;height:auto;"> 
- <img src="./images/img_girl.jpg" alt="Lights" class="w3-image; w3-grayscale-max"> 
-   
-   <h2>Show Different Images Depending on Browser Width</h2>
-<p>Resize the browser width and the image will change at 600px and 1500px.</p>
+    <div class="w3-half w3-padding-large w3-hide-small">
 
-<picture>
-  <source srcset="./images/img_smallflower.jpg" media="(max-width: 600px)">
-  <source srcset="./images/img_flowers.jpg" media="(max-width: 1500px)">
-  <source srcset="./images/flowers.jpg">
-  <img src="./images/img_flowers.jpg" alt="Flowers" style="width:auto;">
-</picture>
+        <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectobeatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+
+    <div class="w3-half w3-padding-large">
+            <p class="w3-large">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+            <p class="w3-large w3-text-grey w3-hide-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+</div>
 
 
-<h1 style="font-size:2vw;">Responsive Text</h1>
+<!-- Start Content -->
+<div id="home" class="w3-content">
 
-<p style="font-size:1.2vw;">Resize the browser window to see how the text size scales.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
 
-<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
-<p>Lorem ipsum<br>Lorem ipsum dolor.</p>
-
-<table style="width:100%">
-  <caption style="text-align:left;">Lorem ipsum</caption>
-  <tr>
-    <th>Lorem ipsum:</th>
-    <td>Lorem ipsum</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Lorem ipsum:</th>
-    <td>Lorem ipsum</td>
-  </tr>
-  <tr>
-    <td>Lorem ipsum</td>
-  </tr>
-</table>
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectobeatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-<table style="width:100%">
-  <tr>
-    <th>Name</th>
-    <th>Telephone</th>
-    <th>Telephone</th>
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>555 77 854</td>
-    <td>555 77 855</td>
-  </tr>
-</table>
-
-<pre>
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis 
-praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
-excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui 
-officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum 
-quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
-nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat 
-facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
-Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus 
-saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. 
-Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis 
-voluptatibus maiores alias consequatur aut perferendis doloribus asperiores 
-repellat.
-</pre>
-
-<table style="width:100%">
-  <tr>
-    <th>Name:</th>
-    <td>Bill Gates</td>
-  </tr>
-  <tr>
-    <th>Telephone:</th>
-    <td>555 77 854</td>
-  </tr>
-  <tr>
-    <th>Telephone:</th>
-    <td>555 77 855</td>
-  </tr>
-</table>
-
-<h3>Lorem ipsum dolor</h3>
-
-<table style="width:100%;">
-  <tr>
-    <td>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br>
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <br> 
-culpa qui officia deserunt mollit anim id est laborum.
-</td>
-    <td>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br>
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis <br>
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br>
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <br> 
-culpa qui officia deserunt mollit anim id est laborum.
-</td>
-</td>
-  </tr>
-  <tr>
-    <td>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</td>
-    <td>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</td>
-  </tr>
-  <tr>
-    <td>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</td>
-    <td>
 <p style="font-family:courier;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-</td>
-  </tr>
-</table>
-
-<h2>Xxxx xxx</h2>
-
-<img src="./images/ellipse.gif" alt="ellipse.se" width="104" height="142">
-
-<h2>Xx Xxxxx Xxx Xxxx</h2>
-
-<ul>
-  <li>Xxxxxx</li>
-  <li>Xxx</li>
-  <li>Xxxx</li>
-</ul>  
-
-<h2>Xx Xxxxx Xxx Xxxx</h2>
-
-<ol>
-  <li>Xxxxxx</li>
-  <li>Xxx</li>
-  <li>Xxxx</li>
-</ol> 
-
-<h1 style="color:blue;">This is a heading</h1>
-<p style="color:red;">This is a paragraph.</p>
-
-<h1 style="font-family:verdana;">This is a heading</h1>
-<p style="font-family:courier;">This is a paragraph.</p>
-
-<p>I am normal text from github</p>
-<p style="color:red;">I am red</p>
-<p style="color:blue;">I am blue</p>
-<p style="font-size:50px;">I am big</p>
-
-<div style="background-color:black;color:white;padding:20px;">
-  <h2>London</h2>
-  <p>London is the capital city of <span style="color:blue;font-weight:bold">England</span>. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-</div> 
-
-<h1 style="background-color:tomato;">Lorem ipsum dolor sit amet </h1>
 
 </body>
 
