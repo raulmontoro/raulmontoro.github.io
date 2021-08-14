@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
 <!-- overriding css -->
 <style>
     body {
@@ -29,8 +28,12 @@
 
     h1,h2,h3,h4,h5,h6 {
         font-family:"Times New Roman", serif; letter-spacing:5px}
-    p { font-size:18px!important
-    }
+
+    p { 
+        font-size:18px!important}
+    
+    .w3-bar-item, .w3-buttom, .w3-dropdown-hover {
+        font-family:"Times New Roman", serif;}
 
 </style>
 
@@ -53,24 +56,92 @@
 <!-- Navigation (Sits on top) -->
 <div class="w3-bar w3-white w3-padding w3-wide" style="max-width:1000px">
     
+    <!-- Left-sided navbar links. Hide them on small screens: w3-hide-small -->
     <div class="w3-left">
-        <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-mobile">Lorem</a>
+        <a  href="#home" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Lorem</a>
+        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page1.html" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 1</a>
+        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page2.html" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 2</a>
     </div>
 
     
     <!-- Right-sided navbar links. Hide them on small screens: w3-hide-small -->
     <div class="w3-right">
-        <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
-        <a href="#menu" class="w3-bar-item w3-button w3-mobile">Menu</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
+        <a  href="#about" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
+        <a  href="#menu" 
+            class="w3-bar-item w3-button w3-mobile">Menu</a>
+        <a  href="#contact" 
+            class="w3-bar-item w3-button w3-mobile">Contact</a>
+        
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-wide">Dropdown<i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          </div>
+        </div>
     </div>
+</div>
+
+<!-- Side Bar left -->
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-wide" style="width:160px; ">
+    <!-- Side Bar Link -->
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+
+    <!-- Side Bar left Acordion with Hover -->
+    <div class="w3-bar-item w3-button">
+          Accordion <i class="fa fa-caret-down"></i>
+    </div>
+    <div class="w3-hide w3-white w3-card-4">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+    
+    <!-- Side Bar left Acordion with Click -->
+    <div class="w3-bar-item w3-button" onclick="myAccFunc()">
+          Accordion <i class="fa fa-caret-down"></i>
+    </div>
+    <div id="demoAcc" class="w3-hide w3-white w3-card-4">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+    </div>
+
+    <!-- Side Bar left Dropdown Hover -->
+    <div class="w3-dropdown-hover">
+      <div class="w3-bar-item w3-button">
+            Dropdown <i class="fa fa-caret-down"></i>
+      </div>
+      <div class="w3-dropdown-content w3-white w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Link</a>
+        <a href="#" class="w3-bar-item w3-button">Link</a>
+      </div>
+    </div>
+    
+
+    <!-- Side Bar left Dropdown with Click -->
+    <div class="w3-dropdown-click">
+      <div class="w3-bar-item w3-button" onclick="myDropFunc()">
+        Dropdown <i class="fa fa-caret-down"></i>
+      </div>
+      <div id="demoDrop" class="w3-dropdown-content w3-white w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Link</a>
+        <a href="#" class="w3-bar-item w3-button">Link</a>
+      </div>
+    </div>
+
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
 
 
 
 
-<!-- Container-->
-<div class="w3-container w3-white">
+<!-- Container with left margin for side bar-->
+<div class="w3-container w3-white" style="margin-left:160px">
   <h2>Lorem ipsum dolor sit amet</h2>
     <p class="w3-large">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -80,23 +151,6 @@
     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
     sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-
-
-
-
-<!-- Pagination -->
-<div class="w3-center">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button">&laquo;</a>
-      <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page1.html" class="w3-button">1</a>
-      <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page2.html" class="w3-button">2</a>
-      <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page3.html" class="w3-button">3</a>
-      <a href="#" class="w3-button">4</a>
-      <a href="#" class="w3-button">&raquo;</a>
-    </div>
-</div> 
-
-
 
 
 
@@ -116,6 +170,31 @@
 
 
 
+<script>
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-none";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-none", "");
+  }
+}
+
+function myDropFunc() {
+  var x = document.getElementById("demoDrop");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+</script>
 </body>
 
 </html>
