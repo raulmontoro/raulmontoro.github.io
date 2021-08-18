@@ -43,52 +43,11 @@
 
 
 
-<!-- BODY -->
-<body class="w3-content w3-padding w3-white w3-card w3-margin-top w3-margin-bottom " style="max-width:1000px">
-
-
-<!--  HERO  -->
-<div class="w3-light-grey w3-padding-32 w3-center">
-  <h1 class="w3-jumbo">Daily Ping</h1>
-</div>
-
-
-<!-- Navigation (Sits on top) -->
-<div class="w3-bar w3-white w3-padding w3-wide" style="max-width:1000px">
-    
-    <!-- Left-sided navbar links. Hide them on small screens: w3-hide-small -->
-    <div class="w3-left">
-        <a  href="#home" 
-            class="w3-bar-item w3-button w3-hover-none w3-mobile">Lorem</a>
-        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page1.html" 
-            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 1</a>
-        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page2.html" 
-            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 2</a>
-    </div>
-
-    
-    <!-- Right-sided navbar links. Hide them on small screens: w3-hide-small -->
-    <div class="w3-right">
-        <a  href="#about" 
-            class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
-        <a  href="#menu" 
-            class="w3-bar-item w3-button w3-mobile">Menu</a>
-        <a  href="#contact" 
-            class="w3-bar-item w3-button w3-mobile">Contact</a>
-        
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-wide">Dropdown<i class="fa fa-caret-down"></i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          </div>
-        </div>
-    </div>
-</div>
+<!-- Body -->
+<body class="w3-content w3-padding w3-white w3-margin-top w3-margin-bottom " style="max-width:1000px">
 
 <!-- Side Bar left -->
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-wide" style="width:160px; ">
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-wide w3-padding w3-margin-bottom" style="width:160px;">
     <!-- Side Bar Link -->
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
 
@@ -122,7 +81,7 @@
     </div>
     
 
-    <!-- Side Bar left Dropdown with Click -->
+    <!-- Side Bar Dropdown with Click -->
     <div class="w3-dropdown-click">
       <div class="w3-bar-item w3-button" onclick="myDropFunc()">
         Dropdown <i class="fa fa-caret-down"></i>
@@ -136,12 +95,61 @@
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
+<!-- End Side Bar left -->
+
+
+
+<!-- Container with left margin for side bar introducir w3-container without
+        padding -->
+<div class="w3-yellow w3-card" style="margin-left:170px">
+
+
+<!--  Banner  -->
+<div class="w3-light-grey w3-padding-32 w3-center">
+  <h1 class="w3-jumbo">Daily Ping</h1>
+</div>
+
+
+<!-- Navigation -->
+<div class="w3-bar w3-white w3-padding w3-wide " style="max-width:1000px">
+    
+    <!-- Left-sided navbar links. Hide them on small screens: w3-hide-small -->
+    <div class="w3-left">
+        <a  href="#home" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Lorem</a>
+        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page1.html" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 1</a>
+        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page2.html" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 2</a>
+    </div>
+
+    
+    <!-- Right-sided navbar links. Hide them on small screens: w3-hide-small -->
+    <div class="w3-right">
+        <a  href="#about" 
+            class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
+        <a  href="#menu" 
+            class="w3-bar-item w3-button w3-mobile">Menu</a>
+        <a  href="#contact" 
+            class="w3-bar-item w3-button w3-mobile">Contact</a>
+        
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-wide">Dropdown<i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- End Navigation -->
 
 
 
 
 <!-- Container with left margin for side bar-->
-<div class="w3-container w3-white" style="margin-left:160px">
+<div class="w3-container w3-white" style="">
   <h2>Lorem ipsum dolor sit amet</h2>
     <p class="w3-large">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -151,8 +159,6 @@
     eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
     sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-
-
 
 
 
@@ -167,6 +173,9 @@
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+
+</div>
+<!-- end of right container -->
 
 
 
