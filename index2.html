@@ -35,6 +35,10 @@
     .w3-bar-item, .w3-buttom, .w3-dropdown-hover {
         font-family:"Times New Roman", serif;}
 
+    .w3-sidebar {
+        margin-bottom:25px;
+    }
+
 </style>
 
 <!-- javaspcript -->
@@ -46,8 +50,11 @@
 <!-- Body -->
 <body class="w3-content w3-padding w3-white w3-margin-top w3-margin-bottom " style="max-width:1000px">
 
+<!-- Container induce bottom margin not working correction needed-->
+<div class="w3-container" style="margin-bottom:25px"; >
+
 <!-- Side Bar left -->
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-wide w3-padding w3-margin-bottom" style="width:160px;">
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-wide w3-padding" style="width:160px;">
     <!-- Side Bar Link -->
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
 
@@ -97,6 +104,8 @@
 </div>
 <!-- End Side Bar left -->
 
+</div>
+<!-- Container induce bottom margin -->
 
 
 <!-- Container with left margin for side bar introducir w3-container without

@@ -35,6 +35,7 @@
     .w3-bar-item, .w3-buttom, .w3-dropdown-hover {
         font-family:"Times New Roman", serif;}
 
+
 </style>
 
 <!-- javaspcript -->
@@ -44,16 +45,20 @@
 
 
 <!-- Body -->
-<body class="w3-container w3-padding w3-white w3-margin-top w3-margin-bottom " style="max-width:1000px">
+<body class="w3-container w3-padding w3-white w3-margin" style="max-width:1000px">
+
+
+<!-- Container left and right divs centered with left margin -->
+<div class="w3-container" style="margin-left:180px">
 
 <!-- Side Bar left -->
-<div class="w3-content w3-bar-block w3-light-grey w3-card w3-wide w3-left w3-padding w3-margin-bottom" style="width:160px;">
+<div class="w3-content w3-bar-block w3-light-grey w3-card w3-wide w3-left w3-padding w3-margin-bottom" style="width:170px;">
     <!-- Side Bar Link -->
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
 
     <!-- Side Bar left Acordion with Hover -->
     <div class="w3-bar-item w3-button">
-          Accordion <i class="fa fa-caret-down"></i>
+          Acc <i class="fa fa-caret-down"></i>
     </div>
     <div class="w3-hide w3-white w3-card-4">
       <a href="#" class="w3-bar-item w3-button">Link</a>
@@ -62,7 +67,7 @@
     
     <!-- Side Bar left Acordion with Click -->
     <div class="w3-bar-item w3-button" onclick="myAccFunc()">
-          Accordion <i class="fa fa-caret-down"></i>
+          Acc <i class="fa fa-caret-down"></i>
     </div>
     <div id="demoAcc" class="w3-hide w3-white w3-card-4">
       <a href="#" class="w3-bar-item w3-button">Link</a>
@@ -72,7 +77,7 @@
     <!-- Side Bar left Dropdown Hover -->
     <div class="w3-dropdown-hover">
       <div class="w3-bar-item w3-button">
-            Dropdown <i class="fa fa-caret-down"></i>
+            Drop <i class="fa fa-caret-down"></i>
       </div>
       <div class="w3-dropdown-content w3-white w3-card-4">
         <a href="#" class="w3-bar-item w3-button">Link</a>
@@ -84,7 +89,7 @@
     <!-- Side Bar Dropdown with Click -->
     <div class="w3-dropdown-click">
       <div class="w3-bar-item w3-button" onclick="myDropFunc()">
-        Dropdown <i class="fa fa-caret-down"></i>
+        Drop <i class="fa fa-caret-down"></i>
       </div>
       <div id="demoDrop" class="w3-dropdown-content w3-white w3-card-4">
         <a href="#" class="w3-bar-item w3-button">Link</a>
@@ -101,13 +106,19 @@
 
 <!-- Container with left margin for side bar introducir w3-container without
         padding -->
-<div class="w3-white w3-card" style="margin-left:170px">
+<div class="w3-white w3-card" style="margin-left:180px">
 
 
 <!--  Banner  -->
 <div class="w3-light-grey w3-padding-32 w3-center">
   <h1 class="w3-jumbo">Daily Ping</h1>
 </div>
+
+<!--  Banner 2  -->
+<div class="w3-light-grey w3-padding-64 w3-margin-bottom w3-center">
+  <h1 class="w3-jumbo">Weekly Ping</h1>
+</div>
+
 
 
 <!-- Navigation -->
@@ -125,14 +136,14 @@
             <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article1/page1.html" class="w3-bar-item w3-button">Article1</a>
             <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article2/page1.html" class="w3-bar-item w3-button">Article2</a>
             <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article3/page1.html" class="w3-bar-item w3-button">Article3</a>
-            <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article4/page1.html" class="w3-bar-item w3-button">Article3</a>
+            <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article4/page1.html" class="w3-bar-item w3-button">Article4</a>
+            <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article5/page1.html" class="w3-bar-item w3-button">Article5</a>
+            <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article6/page1.html" class="w3-bar-item w3-button">Article6</a>
           </div>
         </div>
         <!-- End Button Articles --> 
-
-        <a  href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/page1.html" 
-            class="w3-bar-item w3-button w3-hover-none w3-mobile">Article 1</a>
     </div>
+    <!-- End Left-sided -->
 
     
     <!-- Right-sided navbar links. Hide them on small screens: w3-hide-small -->
@@ -143,16 +154,6 @@
             class="w3-bar-item w3-button w3-mobile">Menu</a>
         <a  href="#contact" 
             class="w3-bar-item w3-button w3-mobile">Contact</a>
-        
-        <div class="w3-dropdown-hover">
-          <button class="w3-button w3-wide">Dropdown<i class="fa fa-caret-down"></i></button>
-          <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-          </div>
-        </div>
-
     </div>
 </div>
 <!-- End Navigation -->
@@ -161,15 +162,17 @@
 
 
 <!-- Container with left margin for side bar-->
-<div class="w3-content w3-white" >
-  <h2>Lorem ipsum dolor sit amet</h2>
-    <p class="w3-large">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-    sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="w3-container">
+    <div class="w3-content w3-white" >
+      <h2>Lorem ipsum dolor sit amet</h2>
+        <p class="w3-large">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+        sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
 </div>
 
 
@@ -188,6 +191,9 @@
 
 </div>
 <!-- end of right container -->
+
+<!-- End Container left and right divs centered -->
+</div>
 
 
 
