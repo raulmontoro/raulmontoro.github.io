@@ -1,0 +1,42 @@
+accordions one javascript function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCES
+
+Navbar
+    Hide
+https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+
+    Shrink
+https://www.w3schools.com/howto/howto_js_navbar_shrink_scroll.asp
+
+    Sticky
+https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+
+
+Sidenav
+    Dropdown !!
+https://www.w3schools.com/howto/howto_js_dropdown_sidenav.asp
+
+
+Accordion
+    one function
+https://www.w3schools.com/howto/howto_js_accordion.asp
+
