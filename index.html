@@ -44,18 +44,39 @@
 
 
 
-<!-- Body -->
+<!-- Cell Row -->
 <body class="w3-cell-row w3-margin-top w3-white">
-    <!-- Left Part Container -->
-    <div class="w3-container w3-cell" style="width:20%">
+
+    <!-- Left Cell -->
+    <div class="w3-container w3-cell w3-pad w3-white w3-mobile" style="width:20%">
 
           <!-- Left Menu 1 -->
           <div class="w3-content w3-bar-block w3-light-grey w3-card w3-wide w3-left
                       w3-padding w3-margin-bottom" style="max-width:270px">
 
-              <!-- links -->
-              <a href="#" class="w3-bar-item w3-button">Link 1</a>
-              <!-- end links -->
+              <!-- Click Accordion -->
+              <button id="accordion" class="w3-bar-item w3-wide">Accordion 1<i class="fa fa-caret-down"></i></button>
+              <div class="w3-white w3-card-4" style="display:none">
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+              </div>
+              <!-- End Click Accordion -->
+
+              <!-- Click Accordion -->
+              <div class="w3-bar-item w3-button" onclick="myAccFunc()">Accordion 2 <i class="fa fa-caret-down"></i></div>
+              <div id="demoAcc" class="w3-hide w3-white w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+              </div>
+              <!-- End Click Accordion -->
+
+              <!-- Click Accordion -->
+              <div id="accordion" class="w3-bar-item w3-button" onclick="myAccFunc()">Accordion 3<i class="fa fa-caret-down"></i></div>
+              <div class="w3-hide w3-white w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+                  <a href="#" class="w3-bar-item w3-button">Link</a>
+              </div>
+              <!-- End Click Accordion -->
 
           </div>
           <!-- End Left Menu 1-->
@@ -65,30 +86,55 @@
                       w3-padding w3-margin-bottom" style="max-width:270px">
 
               <!-- links -->
-              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="./html/article1/page1.html" class="w3-bar-item w3-button">Link 1</a>
+              <a href="./html/article2/page1.html" class="w3-bar-item w3-button">Link 2</a>
+              <a href="./html/article3/page1.html" class="w3-bar-item w3-button">Link 3</a>
+              <a href="./html/article4/page1.html" class="w3-bar-item w3-button">Link 4</a>
+              <a href="./html/article5/page1.html" class="w3-bar-item w3-button">Link 5</a>
+              <a href="./html/article6/page1.html" class="w3-bar-item w3-button">Link 6</a>
+              <a href="#" class="w3-bar-item w3-button">Link 7</a>
               <!-- end links -->
 
           </div>
           <!-- End Left Menu 1-->
+          
+          <!-- Left Menu 2 -->
+          <div class="w3-content w3-bar-block w3-light-grey w3-card w3-wide w3-left
+                      w3-padding w3-margin-bottom" style="max-width:270px">
+
+              <!-- links -->
+              <a href="./index2.html" class="w3-bar-item w3-button">Index 2</a>
+              <a href="./index3.html" class="w3-bar-item w3-button">Index 3</a>
+              <!-- end links -->
+
+          </div>
+          <!-- End Left Menu 2-->
 
     </div >
-    <!-- Left Part Container -->
+    <!-- End Left Cell -->
 
 
 
-    <!-- Main Part -->
-    <div class="w3-container w-cell w3-white w3-card" style="width:80%">
+    <!-- Right Cell -->
+    <div class="w3-container w-cell w3-white w3-mobile" style="width:80%">
 
         <!--  Banner 1 -->
         <div class="w3-light-grey w3-padding-32 w3-center">
           <h1 class="w3-jumbo">Lorem ipsum dolor</h1>
         </div>
 
+        <!-- Padded Container -->
+        <div class="w3-container w3-white w3-card w3-margin-top">
+
+
+        
+                                        <!-- NAVBAR -->
+
 
         <!-- Navbar -->
         <div class="w3-bar w3-white w3-padding w3-wide " style="max-width:1000px">
 
-            <!-- Left Part -->
+            <!-- Left -->
             <div class="w3-left">
                 <a  href="#home"
                     class="w3-bar-item w3-button w3-hover-none w3-mobile">Lorem</a>
@@ -99,50 +145,28 @@
                   <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article1/page1.html" class="w3-bar-item w3-button">Article1</a>
                     <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article2/page1.html" class="w3-bar-item w3-button">Article2</a>
-                    <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article3/page1.html" class="w3-bar-item w3-button">Article3</a>
-                    <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article4/page1.html" class="w3-bar-item w3-button">Article4</a>
-                    <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article5/page1.html" class="w3-bar-item w3-button">Article5</a>
-                    <a href="file:///home/raul/Documents/se/portfolio/raulmontoro.github.io/html/article6/page1.html" class="w3-bar-item w3-button">Article6</a>
                   </div>
                 </div>
                 <!-- end dropdown hover -->
 
-
-                <!-- navbar dropdown click -->
-                <div class="w3-dropdown-click">
-                  <button class="w3-button w3-wide"onclick="myDropFunc2()">ArticlesB<i class="fa fa-caret-down"></i></button>
-                  <div id="demoDrop2" class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
-                    <a href="#" class="w3-bar-item w3-button">Link</a>
-                  </div>
-                </div>
-                <!-- End navbar dropdown click -->
-
-                <!-- navbar ClickAcordion -->
-                <div class="w3-bar-item w3-button" onclick="myAccFunc2()">Acc2<i class="fa fa-caret-down"></i></div>
-                <div id="demoAcc2" class="w3-hide  w3-white w3-card-4">
-                  <a href="#" class="w3-bar-item w3-button">Link</a>
-                  <a href="#" class="w3-bar-item w3-button">Link</a>
-                </div>
-                <!-- End navbar ClickAcordion -->
-
-                </div>
-                <!-- End Left Part -->
-
-
-            <!-- Right Part-->
-            <div class="w3-right">
-                <a  href="#about"
-                    class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
-                <a  href="#menu"
-                    class="w3-bar-item w3-button w3-mobile">Menu</a>
-                <a  href="#contact"
-                    class="w3-bar-item w3-button w3-mobile">Contact</a>
             </div>
-            <!-- End Right Part-->
+            <!-- End Left -->
+
+
+            <!-- Right -->
+            <div class="w3-right">
+                <a  href="#about" class="w3-bar-item w3-button w3-hover-none w3-mobile">About</a>
+                <a  href="#menu" class="w3-bar-item w3-button w3-mobile">Menu</a>
+                <a  href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
+            </div>
+            <!-- End Right -->
 
         </div>
         <!-- End Navigation -->
+
+
+        
+
 
 
         <!-- Article 1-->
@@ -160,11 +184,11 @@
         </div>
         <!-- End Article 1-->
 
-
-
+    </div>
+    <!-- End Padded Container -->
 
         <!-- Footer -->
-        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+        <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge w3-margin-bottom" style="margin-top:128px">
           <i class="fa fa-facebook-official w3-hover-opacity"></i>
           <i class="fa fa-instagram w3-hover-opacity"></i>
           <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -176,7 +200,7 @@
         <!-- End Footer -->
 
     </div>
-    <!-- End Right Part -->
+    <!-- End Right Cell -->
 
 
 <script>
@@ -192,6 +216,23 @@ function myAccFunc() {
     // x.previousElementSibling.className.replace(" w3-green", "");
   }
 }
+
+<!-- multiple Accordion one _function -->
+var acc = document.getElementsById("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+<!-- end multiple accordion one _function -->
 
 function myAccFunc2() {
   var x = document.getElementById("demoAcc2");
@@ -234,9 +275,6 @@ function myDropFunc2() {
 </script>
 
 </body>
+<!-- End Cell Row -->
 
 </html>
-
-<!--    TODO
-        one drop function per dropdown menu?
-        several divs sidebar-->
