@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Cube</title>
+
+        <link rel="stylesheet" href="../css/css.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- SIDE NAV -->
+        <div id="sidebar" class="sidenav">
+        </div>
+
+    <script>
+        
+        /*  DOCUMENT
+                dimensions
+        */
+        
+        var documentheight = document.documentElement.clientHeight;
+        var documentwidth = document.documentElement.clientWidth;
+
+        var doccenterx = documentwidth / 2;
+        var doccentery = documentheight / 2;
+        var doccenterz = 0;
+
+        
+
+
+
+
+        /*  CANVAS
+            set up the canvas and context
+        */
+        var canvas = document.createElement("canvas");
+        canvas.height = documentheight;
+        canvas.width = documentwidth;
+        document.body.appendChild(canvas);
+    
+        /*  CANVAS CONTEXT
+                colours and lines
+        */
+
+        var context = canvas.getContext("2d");
+        const COLOR_BG = "black";
+        const COLOR_CUBE = "white";
+        
+        context.fillStyle = COLOR_BG;
+        context.strokeStyle = COLOR_CUBE;
+        context.lineWidth = documentwidth / 500;
+        context.lineCap = "round";
+    
+    
+    
+    
+        
+        /*  CUBE REPRESENTATION
+            position    x, y, z     (cube center position)
+            size        cubesize
+        */
+    
+        var cubex = doccenterx;
+        var cubey = doccentery;
+        var cubez = doccenterz;
+        var cubesize = documentheight / 16;
+    
+         var vertices = [[cubex - cubesize, cubey - cubesize, cubez - cubesize],
+                         [cubex + cubesize, cubey - cubesize, cubez - cubesize],
+                         [cubex + cubesize, cubey + cubesize, cubez - cubesize],
+                         [cubex - cubesize, cubey + cubesize, cubez - cubesize],
+    
+                         [cubex - cubesize, cubey - cubesize, cubez + cubesize],
+                         [cubex + cubesize, cubey - cubesize, cubez + cubesize],
+                         [cubex + cubesize, cubey + cubesize, cubez + cubesize],
+                         [cubex - cubesize, cubey + cubesize, cubez + cubesize]];
+
+
+
+
+        /*  rotation function
+             revolution per second (rps)
+                 
+                 (1 rps / 1 s) · (2PI rad / 1 rps) =  2PI/s
+    
+             factor
+                 two-dimentinal projection
+                
+        */
+        function rotateCube() {
+        
+            const ROTATIONSPEED = 0.05e-3;
+    
+            const factorx = 1;
+            const factory = 3;
+            const factorz = 2;
+    
+            const SPEED_X = ROTATIONSPEED * factorx;
+            const SPEED_Y = ROTATIONSPEED * factory;
+            const SPEED_Z = ROTATIONSPEED * factorz;
+            
+            var time1 = Date.now();
+            var timeDelta = time1 - time0;
+            time0 = time1;
+    
+            for (let i=0; i<vertices.length; ++i) {
+                // rotation angle
+                let angle;
+
+                let dx;
+                let dy;
+                let dz;
+                let x, y, z;
+                
+                /*  rotate z axis
+                    rotate the cube along the z axis in radiants
+                    z coordinate invariable
+                */
+                angle = timeDelta * SPEED_Z * 2*Math.PI;
+                dx = vertices[i][0] - cubex;  // x
+                dy = vertices[i][1] - cubey;  // y
+    
+                x = dx * Math.cos(angle) - dy * Math.sin(angle);
+                y = dx * Math.sin(angle) + dy * Math.cos(angle);
+    
+                vertices[i][0] = x + cubex;
+                vertices[i][1] = y + cubey;
+
+
+                // rotate the cube along the x axis
+                angle = timeDelta * SPEED_X * Math.PI*2;
+                dy = vertices[i][1] - cubey;
+                dz = vertices[i][2] - cubez;    // z
+    
+                y = dy * Math.cos(angle) - dz * Math.sin(angle);
+                z = dy * Math.sin(angle) + dz * Math.cos(angle);
+    
+                vertices[i][1] = y + cubey;
+                vertices[i][2] = z + cubez;
+
+                // rotate the cube along the y axis
+                angle = timeDelta * SPEED_Y * Math.PI * 2;
+                dx = vertices[i][0] - cubex;
+                dz = vertices[i][2] - cubez;
+    
+                x = dz * Math.sin(angle) + dx * Math.cos(angle);
+                z = dz * Math.cos(angle) - dx * Math.sin(angle);
+    
+                vertices[i][0] = x + cubex;
+                vertices[i][2] = z + cubez;
+            }
+        }
+    
+        function drawCube() {
+            /*  drawing 2D projection of a cube
+                coordenate z is ignored because of 2D context, vertices [][2]
+            */
+
+            context.beginPath();
+            context.moveTo(   vertices[0][0], vertices[0][1], vertices[0][2]);
+            context.lineTo(   vertices[1][0], vertices[1][1], vertices[1][2]);
+            context.lineTo(   vertices[2][0], vertices[2][1], vertices[2][2]);
+            context.lineTo(   vertices[3][0], vertices[3][1], vertices[3][2]);
+            context.lineTo(   vertices[0][0], vertices[0][1], vertices[0][2]);
+
+            context.moveTo(   vertices[4][0], vertices[4][1], vertices[4][2]);
+            context.lineTo(   vertices[5][0], vertices[5][1], vertices[5][2]);
+            context.lineTo(   vertices[6][0], vertices[6][1], vertices[6][2]);
+            context.lineTo(   vertices[7][0], vertices[7][1], vertices[7][2]);
+            context.lineTo(   vertices[4][0], vertices[4][1], vertices[4][2]);
+            
+            context.moveTo(   vertices[0][0], vertices[0][1], vertices[0][2]);
+            context.lineTo(   vertices[4][0], vertices[4][1], vertices[4][2]);
+
+            context.moveTo(   vertices[1][0], vertices[1][1], vertices[1][2]);
+            context.lineTo(   vertices[5][0], vertices[5][1], vertices[5][2]);
+
+            context.moveTo(   vertices[2][0], vertices[2][1], vertices[2][2]);
+            context.lineTo(   vertices[6][0], vertices[6][1], vertices[6][2]);
+
+            context.moveTo(   vertices[3][0], vertices[3][1], vertices[3][2]);
+            context.lineTo(   vertices[7][0], vertices[7][1], vertices[7][2]);
+
+            context.stroke();
+        }
+    
+        // set up the animation loop
+        var time0 = Date.now();
+    
+        requestAnimationFrame(loop);
+    
+    
+        function loop() {
+    
+            // background
+            context.fillRect(0, 0, documentwidth, documentheight);
+    
+            rotateCube(); 
+            drawCube(); 
+    
+            // call the next frame
+            requestAnimationFrame(loop);
+        }
+    </script>
+
+        <!-- JAVASCRIPT -->
+        <script src="../js/javascript.js"></script> 
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</body>
+</html>

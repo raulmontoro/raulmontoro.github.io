@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+/* 
+ * modern features after 2009
+ * may cause incompatabilities with older codes
+ * implicit if classes are used
+ */
+"use strict";
+
+
+/*
+ *  LITERALS
+ *
+ *  Backticks are “extended functionality” quotes.
+    They allow us to embed variables and expression
+ *  embed a variable
+ *  double and single quotes are equivalent
+ */
+
+/*  VARIABLES
+ *
+ *  let and var are almost the same, let the modern one
+ *
+ */
+
+/*
+    array are object
+*/
+
+/*
+    function
+        function variables shadows outer ones
+*/
+
+
+
+    let str = "hello world!";
+    document.write(str, "<br>");
+
+    str = ["hello world1", "hello world2", "hello world3"];
+    document.write(str, "<br>");
+
+
+    /*  ARRAY DECLARATION
+        insertion
+        delation
+    */
+    
+    let arr =[1,2,3,4,5];
+    document.write(arr, "<br>");
+    document.write(arr[2], "<br>");
+
+
+    arr = [[1, 2, 3, 4],
+           [5, 6, 7, 8],
+           [9, 10, 11, 12]];
+    document.write(arr, "<br>");
+    document.write(arr.length, "<br>");
+    document.write(arr[1].length, "<br>");
+    document.write(arr[2].length, "<br>");
+
+    arr.unshift("hello");
+    document.write(arr, "<br>");
+
+    arr.push("bye");
+    document.write(arr, "<br>");
+
+    arr.shift();
+    document.write(arr, "<br>");
+
+    arr.pop();
+    document.write(arr, "<br>");
+
+
+
+    arr = new Array(10,11,12,13,14);
+    document.write(arr, "<br>");
+    arr = [15, 16, 17, 18, 19, 20];
+    document.write(arr, "<br>");
+
+    
+
+    arr = [[1, 2, 3, 4],
+           [5, 6, 7, 8],
+           [9, 10, 11, 12]];
+
+    for (let i=0; i<arr.length; ++i) {
+        for (let j=0; j<arr[i].length; ++j) {
+            document.write(arr[i][j], ' ');
+        }
+            document.write("<br>");
+    }
+
+    for (let i in arr) {
+        document.write(arr[i]);
+    }
+
+    function func1() {
+        return "hello";
+    }
+
+</script>
+
+
+
+<script src="../js/array.js"></script> 
+</body>
+</html> 

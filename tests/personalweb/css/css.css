@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+body {
+    max-width:1000px;
+    margin: 0px;
+    margin-left: 100px; /* Same as the width of the sidenav */
+    margin-right: 200px; /* Same as the width of the sidenav */
+    font-family: "Lato", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: Chocolate;
+}
+
+h1 {
+    text-align: left;
+    color: darkolivegreen;
+    color: black;
+}
+
+h2, h3, h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+
+pre {
+    font-family: "Lato", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+/* all images same size */
+img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+table, th, td {
+    border-color: #96D4D4;
+    border:1px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-radius: 0px;
+}
+
+th, td {
+    background-color: #96D4D4;
+    background-color: Chocolate;
+    border-style: dotted;
+}
+
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+/*
+    fixed sidenav
+    80% web browser window length
+
+    on mouse-over
+    dropdown container
+        hidden by default
+        optional lighter backfround color and some left padding
+    caret down icon
+*/
+
+.sidenav {
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  overflow-x: hidden;
+  overflow: auto;
+  position: fixed;
+
+  height: 100%;
+  height: 80%;
+  width: 175px;
+
+  margin: 0;
+  margin-top: 50px; /* Same as the width of the sidenav */
+  margin-left: 55px; /* Same as the width of the sidenav */
+  padding-top: 20px;
+  padding-left: 25px;
+  
+  background-color: grey;
+  background-color: #F0D4B0;
+  background-color: SpringGreen;
+  background-color: Chocolate;
+  opacity: 100;
+
+}
+
+.sidenav a, .dropdown-btn {
+    display: block;
+    
+    padding-top: 20px;
+    padding: 0;
+    padding: 5px 8px 6px 16px;
+
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    text-align: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: white;
+}
+
+.active {
+    background-color: Chocolate;
+    background-color: SpringGreen;
+    color: white;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: Chocolate;
+    background-color: lightGreen;
+    padding-left: 8px;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+
+
+/*
+    main
+    content
+*/
+.main {
+    margin-left: 200px; /* same as the width of the sidenav */
+    font-size: 20px; /* increased text to enable scrolling */
+    padding: 0px 10px;
+}
+.content {
+    height: 1000px;
+    height: auto;
+
+    margin-top: 50px;
+    margin-left: 0px; /* Same as the width of the sidenav */
+    margin-left: 200px;
+    margin-right: 0px;
+
+    padding: 15px 15px;
+
+    font-size: 15px; /* Increased text to enable scrolling */
+
+    background-color: #F0D4B0;
+    background-color: Chocolate;
+}
+
+.content p {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+/*  TITLES
+*/
+h1.title1 {
+    text-align: center;
+    color: darkolivegreen;
+    color: black;
+}
+
+h4.titleabstract {
+    text-align:center;
+    color:darkolivegreen;
+    color:black;
+}
+p.titleabstract {
+    text-align: justified;
+    text-align: justified;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+h2.title2 {
+    padding: 10px;
+    text-align:left;
+    color:darkolivegreen;
+    color:black;
+}
+
+p.title2 {
+    padding: 10px;
+    text-align:justified;
+}
+
+h3.title3 {
+    padding: 0px 0px 0px 50px;
+    text-align:left;
+    color:darkolivegreen;
+    color:black;
+}
+p.title3 {
+    padding: 10px;
+    text-align:justified;
+}
+
+h4.title4 {
+    padding: 0px 0px 0px 100px;
+    text-align:left; color:darkolivegreen;
+    color:black;
+}
+p.title4 {
+    padding: 10px;
+    text-align:justified;
+}
+
+
+
+
+
+/* Flexbox */
+.flex-container {
+    height: auto;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+/* Flexbox items */
+.flex-container > div {
+    background-color: DodgerBlue;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.newspaper {
+    column-count: 2;
+    column-width: 100%;
+    column-gap: 40px;
+    column-fill: balance;
+
+    column-rule-width: 1px;
+    column-rule-style: none;
+    column-rule-style: solid;
+    column-rule-color: black;
+    column-rule: 1px solid black;
+}
+.newspaper h1 {
+    column-span: all;
+    text-align: center;
+    color:black;
+}
+.newspaper h2, h3, h3 {
+    column-span: 1;
+    color:black;
+}
+
+.row {
+    /* display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    /* -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 5px 5px 25px 25px;    /* vertical (top-down), horizontal (left-right), before 25px was 0px */
+}
+
+.column {
+    /* -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 5px 5px 25px 25px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 10px;
+        color: red;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+    .sidenav a {
+        float: left;
+        color: red;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidenav a {
+        text-align: center;
+        float: none;
+    }
+}

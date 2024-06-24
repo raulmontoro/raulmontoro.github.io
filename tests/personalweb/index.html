@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- META TAGS -->
+
+        <title>Web Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" href="./css/css.css">
+        
+        <!-- fa fa-caret-down dropdown icon-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        -->
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            
+            html {
+              height: 100%;
+              line-height: 1.8;
+            }
+        </style>
+
+    </head>
+
+
+
+
+    <!-- BODY -->
+
+    <body>
+        
+        <!-- SIDE NAV -->
+    
+        <div id="sidebar" class="sidenav">
+        </div>
+        
+        
+        <!-- PAGE CONTAINER -->
+        <div id="pagecontainer">
+        
+
+            <!-- ARTICLE -->
+            <!-- FUNCTIONALITY -->
+
+            <div id="article2" class="content">
+                <pre>
+functionality
+service
+microservice
+utility
+production
+project proposal
+                </pre>
+            </div>
+        
+            <!-- ARTICLE -->
+            <div id="article3" class="content">
+
+                    <!-- GRID -->
+
+                    <div class="row">
+                        <div class="column">
+                          <img src="./data/image_birds/bird_1.jpg">
+                          <img src="./data/image_birds/bird_2.jpg">
+                          <img src="./data/image_birds/bird_4.jpg">
+                          <img src="./data/image_birds/bird_5.jpg">
+                          <img src="./data/image_birds/bird_7.jpg">
+                          <img src="./data/image_birds/bird_9.jpg">
+                          <img src="./data/image_birds/bird_10.jpg">
+                          <img src="./data/image_birds/bird_11.jpg">
+                        </div>
+                        <div class="column">
+                          <img src="./data/image_birds/bird_12.jpg">
+                          <img src="./data/image_birds/bird_13.jpg">
+                          <img src="./data/image_birds/bird_14.jpg">
+                          <img src="./data/image_birds/bird_15.jpg">
+                          <img src="./data/image_birds/bird_17.jpg">
+                          <img src="./data/image_birds/bird_18.jpg">
+                          <img src="./data/image_birds/bird_19.jpg">
+                          <img src="./data/image_birds/bird_23.jpg">
+                        </div>
+                    </div>
+                      
+                    <div class="row">
+                      <div class="column">
+                        <img src="./data/image_birds/bird_24.jpg">
+                        <img src="./data/image_birds/bird_25.jpg">
+                        <img src="./data/image_birds/bird_26.jpg">
+                        <img src="./data/image_birds/bird_27.jpg">
+                        <img src="./data/image_birds/bird_29.jpg">
+                        <img src="./data/image_birds/bird_30.jpg">
+                        <img src="./data/image_birds/bird_33.jpg">
+                        <img src="./data/image_birds/bird_34.jpg">
+                      </div>
+                      <div class="column">
+                        <img src="./data/image_birds/bird_35.jpg">
+                        <img src="./data/image_birds/bird_36.jpg">
+                        <img src="./data/image_birds/bird_37.jpg">
+                        <img src="./data/image_birds/bird_38.jpg">
+                        <img src="./data/image_birds/bird_39.jpg">
+                        <img src="./data/image_birds/bird_40.jpg">
+                        <img src="./data/image_birds/bird_41.jpg">
+                        <img src="./data/image_birds/bird_42.jpg">
+                      </div>
+                    </div>
+            </div>
+
+            
+
+
+
+            <!-- ARTICLE -->
+
+            <div class="content">
+                    <div class="flex-container" >
+                        <!-- 1 -->
+                        <div>
+                            <!-- placeholder -->
+                            <img id="id1", src="../data/image_birds/bird_1.jpg" alt="description1" style="display:inline-block!important">
+                            <br>
+                            <a href="javascript:setImageVisible('id1', true)">show image</a>
+                            <br>
+                            <a href="javascript:setImageVisible('id1', false)">hide image</a>
+                            <br>
+                        </div>
+
+                        <!-- 2 -->
+                        <div>
+                            <img id="id2", src="../data/image_birds/bird_1.jpg" alt="description1" style="display:inline-block!important">
+                            <br>
+                            <a href="javascript:setImageSource('id2', '../data/image_birds/bird_2.jpg')">image 2</a>
+                            <br>
+                            <a href="javascript:setImageSource('id2', '../data/image_birds/bird_4.jpg')">image 4</a>
+                        </div>
+
+                    </div>
+            </div>
+
+            
+
+
+            <!-- ARTICLE FORMS-->
+            <div class="content">
+                <!-- Header -->
+    
+                <div class="header" id="myHeader">
+                    <h1>Image Grid</h1>
+                    <p>Click on the buttons to change the grid view.</p>
+                    <button class="btn" onclick="one()">1</button>
+                    <button class="btn active" onclick="two()">2</button>
+                    <button class="btn" onclick="four()">4</button>
+                </div>
+                
+                <!-- Photo Grid -->
+    
+                <div class="row">
+                    <div class="column">
+                          <img src="./data/image_birds/bird_1.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_2.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_4.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_5.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_7.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_9.jpg" style="width:100%">  
+                          <img src="./data/image_birds/bird_10.jpg" style="width:100%"> 
+                          <img src="./data/image_birds/bird_11.jpg" style="width:100%"> 
+                    </div>
+                    <div class="column">
+                          <img src="./data/image_birds/bird_12.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_13.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_14.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_15.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_17.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_18.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_19.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_23.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                          <img src="./data/image_birds/bird_24.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_25.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_26.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_27.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_29.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_30.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_33.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_34.jpg" style="width:100%">
+                    </div>
+                    <div class="column">
+                          <img src="./data/image_birds/bird_35.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_36.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_37.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_38.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_39.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_40.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_41.jpg" style="width:100%">
+                          <img src="./data/image_birds/bird_42.jpg" style="width:100%">
+                    </div>
+            </div>
+    
+    
+
+            <!-- ARTICLE FORMS-->
+            <div class="content">
+    
+                <p id="demo">A Paragraph.</p>
+                
+                <!-- button executes javascript -->
+                <button type="button" onclick="myFunction()">Try it</button>
+                <button type="button" onclick="document.write(5 + 6)">Try it</button>
+                <button type="button" onclick="this.innerHTML=Date()">The time is?</button>
+
+                <!-- button execute a browser function -->
+                <button type="button" onclick="window.print()">Print this page</button>
+            </div>
+
+            <script>
+                function myFunction() {
+                  document.getElementById("demo").innerHTML = "Paragraph changed.";
+                }
+            </script>
+
+
+           
+
+
+           <!-- ARTICLE FORMS-->
+           <div class="content">
+               <form name="uploadForm">
+
+                  <!-- browsing files -->
+
+                  <div>
+                    <input id="uploadInput" type="file" multiple />
+                  <div>
+
+                   <!-- sending data -->
+
+                    <div>
+                        <input type="submit" value="Send file" />
+                    </div>
+                    
+                    <hr>
+
+                   <!-- output -->
+                  <div>
+                    <label for="fileNum">Selected files:</label>
+                    <output id="fileNum">0</output>;
+                  <div>
+
+                  <div>
+                    <label for="fileSize">Total size:</label>
+                    <output id="fileSize">0</output>
+                  <div>
+
+                  </div>
+   
+
+                </form>
+            </div>
+
+        </div>
+        <!-- ENDPAGE CONTAINER -->
+
+
+
+
+        <!-- JAVASCRIPT -->
+
+        <script src="./js/javascript.js"></script> 
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+        <script src="./js/a.js"></script>
+
+        <!--    PAGE CONTAINER
+        -->
+        <script>
+            function page1() {
+                const pagecontainer = document.getElementById('pagecontainer');
+                //pagecontainer.innerHTML = "<iframe id='myHtml' src='./html/page04.html#article3'></iframe>";
+                pagecontainer.innerHTML = "data1";
+                pagecontainer.innerHTML = "data2";
+
+                // readfile function defined in fs module
+                const fs = require('fs');
+                fs.readFile('./html/page04.html', function read(err, data) {
+                    if (err) {
+                        pagecontainer.innerHTML = "data3";
+                        throw err;
+                    }
+                 
+                    // Converting Raw Buffer to text
+                    // data using tostring function.
+                    //console.log(data);
+                    pagecontainer.innerHTML = "data4";
+                    pagecontainer.innerHTML = data;
+                });
+
+
+            }
+
+        </script>
+
+
+        <script>
+            // Get the elements with class="column"
+            var elements = document.getElementsByClassName("column");
+            
+            // Declare a loop variable
+            var i;
+            
+            // Full-width images
+            function one() {
+                for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+              }
+            }
+            
+            // Two images side by side
+            function two() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+              }
+            }
+            
+            // Four images side by side
+            function four() {
+              for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+              }
+            }
+            
+            // Add active class to the current button (highlight it)
+            var header = document.getElementById("myHeader");
+            var btns = header.getElementsByClassName("btn");
+
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+
+        <!-- ARTICLE FORMS-->
+        <script>
+
+            /* form */
+            const uploadInput = document.getElementById("uploadInput");
+
+            uploadInput.addEventListener(
+                  "change",
+                  () => {
+                    // Calculate total size
+                    let numberOfBytes = 0;
+
+                    for (const file of uploadInput.files) {
+                        numberOfBytes += file.size;
+                    }
+
+                    // Approximate to the closest prefixed unit
+                    const units = [
+                      "B",
+                      "KiB",
+                      "MiB",
+                      "GiB",
+                      "TiB",
+                      "PiB",
+                      "EiB",
+                      "ZiB",
+                      "YiB",
+                    ];
+
+                    const exponent = Math.min(
+                      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+                      units.length - 1
+                    );
+
+                    const approx = numberOfBytes / 1024 ** exponent;
+
+                    const output =
+                      exponent === 0
+                        ? `${numberOfBytes} bytes`
+                        : `${approx.toFixed(3)} ${
+                            units[exponent]
+                          } (${numberOfBytes} bytes)`;
+
+                    document.getElementById("fileNum").textContent =
+                      uploadInput.files.length;
+
+                    document.getElementById("fileSize").textContent = output;
+                  },
+                  false
+            );
+        </script>
+
+        
+
+
+
+
+        <!-- ARTICLE FORMS-->
+        <div class="content">
+            <!-- READ FILES -->
+            <input type='file' id='myfileinput' multiple>
+            <button type="file" id="myfileinput" multiple>BROWSE...</button>            
+            <button type="button" class="control-button" id="send-file-button">SUBMIT-FILE</button>
+            
+            <div id='output'>
+        </div>
+        <script>
+            var button = document.getElementById("send-file-button");
+            var fileInput = document.getElementById("myfileinput");
+            var output = document.getElementById("output");
+            
+            button.onclick = function () {
+              var files = fileInput.files;
+              var reader = new FileReader();
+              reader.onload = function () {
+                output.innerText = reader.result;
+              };
+        
+              if(files[0]) {
+                // This does not return the text. It just starts reading.
+                // The onload handler is triggered when it is done and the result is available.
+                reader.readAsText(files[0]);
+              }
+            };
+        </script>
+
+       
+
+        <!-- DOM -->
+        <!-- https://www.w3schools.com/js/js_htmldom_nodes.asp -->
+        <!-- https://www.w3schools.com/js/default.asp -->
+        <!--
+        <script>
+             /* image src */
+             let image1 = new Image();
+             image1.src = "./data/image_birds/bird_1.jpg"
+             document.getElementById('id1').appendChild(image1);
+             //document.getElementById('id1').insertBefore(image1);
+
+        </script>
+        -->
+
+        <script>
+            /* -- image src  -- */
+            function setImageSource(id, source) {
+                let img = document.getElementById(id);
+                //img.src = "./image/bird2.jpg";
+                img.src = source;
+            }
+
+            /* -- image style  -- */
+            function setImageVisible(id, visible) {
+                var img = document.getElementById(id);
+                img.style.visibility = (visible ? 'visible' : 'hidden');
+            }
+
+        </script>
+
+    </body>
+
+</html> 
