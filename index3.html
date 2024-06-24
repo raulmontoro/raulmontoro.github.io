@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Title</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
@@ -49,33 +51,83 @@
             }
 
             
-            div.content {
-              /* Same width as the sidenav + left position in px */
-              margin-left: 200px;
+            div.main {
+                /* Same width as the sidenav + left position in px */
+                margin-left: 200px;
 
-              /* Increased text to enable scrolling */
-              font-size: 28px; 
+                /* Increased text to enable scrolling */
+                font-size: 28px; 
 
-              padding: 1px 16px;
-              height: 1000px;
+                padding: 1px 16px;
+                height: 1000px;
             }
+           
+
+
+            /*  MEDIA QUERIES
+                typical device breakpoints
+                https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+                https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+                https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
+            */
             
-            @media screen and (max-width: 700px) {
-              .sidenav {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-              }
-              .sidenav a {float: left;}
-                    div.content {margin-left: 0;}
+             
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (max-width: 1200px) {
+                .sidenav {
+                      height: auto;
+                      width: 100%;
+                      position: relative;
+                }
+
+                div.main {
+                    margin-left: 0;
+                }
+
+                .sidenav a {
+                    float: left;
+                    font-size: 20px;
+                }
+            } 
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (max-width: 992px) {
+                    .sidebar a {
+                      text-align: center;
+                      float: none;
+                      font-size: 15px;
+                    }
+
+
             }
 
-            @media screen and (max-width: 400px) {
-                    .sidenav a {
-                            text-align: center;
-                            float: none;
-                          }
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (max-width: 768px) {
+
+
+
+
             }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (max-width: 600px) {
+
+            }
+
+
+             /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+
+            }
+
+            /*  On screens 
+                that are less than 400px,
+                display the bar vertically, instead of horizontally */
+            @media screen and (max-width: 400px) {
+
+            }
+
         </style>
     </head>
 
@@ -98,9 +150,9 @@
    
 
 
-    <div class="content">
-            <h2>Responsive Sidebar Example</h2>
-            <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 700px or less.</p>
+    <div class="main">
+            <h2>Responsive Sidebar. Media Queries.</h2>
+            <p>Transform the sidenav to a top navigation bar when the screen size is 700px or less.</p>
             <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
             <h3>Resize the browser window to see the effect.</h3>
 
