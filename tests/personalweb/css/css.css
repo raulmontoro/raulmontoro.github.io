@@ -322,16 +322,6 @@ p.title4 {
   color: white;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 10px;
-        color: red;
-    }
-}
-
 @media screen and (max-width: 700px) {
     .sidenav {
         position: relative;
@@ -345,6 +335,16 @@ p.title4 {
 
     div.content {
         margin-left: 0;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 10px;
+        color: red;
     }
 }
 
