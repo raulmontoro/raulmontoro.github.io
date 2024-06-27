@@ -17,7 +17,7 @@
                 position: fixed;
 
                 height: 100%;
-                width:  175px;
+                width:  155px;
                 margin: 50px 25px 10px 20px;
                 padding: 6px 8px 6px 6px;
 
@@ -34,7 +34,7 @@
                 padding: 6px 8px 6px 6px;
             
                 display: block;
-                font-size: 22px;
+                font-size: 20px;
                 color: gray;
                 text-decoration: none;
             }
@@ -52,12 +52,12 @@
             
             div.main {
                 /* Same width as the sidenav + left position in px */
-                margin-left: 200px;
+                margin: 50px 50px 100px 185px;
+                padding: 1px 16px;
 
                 /* Increased text to enable scrolling */
-                font-size: 28px; 
+                font-size: 20px; 
 
-                padding: 1px 16px;
                 height: 1000px;
             }
            
@@ -75,21 +75,23 @@
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (max-width: 1200px) {
 
-                body {
-                    background-color: yellow;
-                }
             } 
 
             /* Large devices (laptops/desktops, 992px and up) */
-            @media only screen and (max-width: 992px) {
+            @media only screen and (min-width: 992px) {
             }
 
                 body {
                     background-color: red;
                 }
 
+                .sidenav {
+                    background-color: red;
+                }
+
             /* Medium devices (landscape tablets, 768px and up) */
             @media only screen and (max-width: 768px) {
+
                 body {
                     background-color: green;
                 }
