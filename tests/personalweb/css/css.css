@@ -107,6 +107,8 @@ th, td {
 
 }
 
+
+/*  https://www.w3schools.com/css/css3_buttons.asp */
 .sidenav a, .dropdown-btn {
     display: block;
     
@@ -124,6 +126,7 @@ th, td {
     text-align: left;
     text-align: none;
 }
+
 
 .sidenav a:hover, .dropdown-btn:hover {
   color: white;

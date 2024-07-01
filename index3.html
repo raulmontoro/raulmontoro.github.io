@@ -6,8 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
+
+            * {
+                box-sizing: border-box;
+            }
+            
+            html {
+              height: 100%;
+              line-height: 1.4;
+            }
             body {
-                margin: 0%;
+
+
+                /*  margin-top
+                    margin-right
+                    margin-bottom
+                    margin-left
+                */
+                margin: 10% 10% 10% 10%;
                 font-family: "Times New Roman", Times, serif;
             }
             
@@ -17,9 +33,11 @@
                 position: fixed;
 
                 height: 100%;
-                width:  155px;
-                margin: 50px 25px 10px 20px;
-                padding: 6px 8px 6px 6px;
+                width:  200px;
+
+                margin: 10% 10% 10% 10%;
+                padding: 0;
+                
 
                 background-color: white;
     
@@ -29,38 +47,63 @@
                 z-index: 1;
             }
             
-            .sidenav a {
-                margin:  2px 2px 2px 2px ;
-                padding: 6px 8px 6px 6px;
-            
+            /*  check
+                for buttom with same text style
+                buttom is in a class div
+                https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+            */
+            .sidenav a, .dropdown-btn {
                 display: block;
+
+                margin:  0;
+                padding: 0;
+
                 font-size: 20px;
                 color: gray;
                 text-decoration: none;
+                
+                /* non showing button */
+                border: none;
+                background: none;
+                cursor: pointer;
+                outline: none;
             }
              
-            .sidenav a.active {
+            .sidenav a.active, .dropdown-btn.active {
               background-color: lightgrey;
               color: black;
             }
 
-            .sidenav a:hover:not(.active) {
+            .sidenav a:hover:not(.active), .dropdown-btn.active:hover:not(.active) {
               background-color: lightgrey;
               color: grey;
+            }
+
+
+            .dropdown-container {
+                display: none;
+                padding-left: 8px;
             }
 
             
             div.main {
                 /* Same width as the sidenav + left position in px */
-                margin: 50px 50px 100px 185px;
-                padding: 1px 16px;
+                height: 1000px;
+                
+                margin: 10% 20% 10% 20%;
+                padding: 0;
 
                 /* Increased text to enable scrolling */
                 font-size: 20px; 
 
-                height: 1000px;
             }
            
+
+            .mycanvas {
+                border: 1px solid;
+            }
+
+
 
 
             /*  MEDIA QUERIES
@@ -69,8 +112,6 @@
                 https://www.w3schools.com/css/css_rwd_mediaqueries.asp
                 https://www.w3schools.com/howto/howto_css_sidebar_responsive.asp
             */
-            
-             
 
             /* Extra large devices (large laptops and desktops, 1200px and up) */
             @media only screen and (max-width: 1200px) {
@@ -96,38 +137,32 @@
                     background-color: green;
                 }
 
+                .sidenav {
+                    background-color: green;
+                }
+
+                .sidenav {
+                    position: relative;
+                    height: auto;
+                    width:  100%;
+
+
+                }
+
+                .sidenav a, .dropdown-btn {
+                    float: left;
+
+                }
+
+                div.main{
+                    margin-left: 0;
+                }
+
             }
 
             /* Small devices (portrait tablets and large phones, 600px and up) */
             @media only screen and (max-width: 600px) {
 
-                body {
-                    background-color: blue;
-                }
-
-                .sidenav {
-
-                    height: auto;
-                    width:  100%;
-                    margin: 50px 25px 10px 20px;
-                    padding: 6px 8px 6px 6px;
-
-                    background-color: blue;
-    
-                    overflow-x: hidden;
-                    overflow: auto;
-
-                    z-index: 1;
-                }
-
-                .sidenav a {
-                    margin:  2px 2px 2px 2px ;
-                    padding: 6px 8px 6px 6px;
-
-                    float: none;
-                    width 100%;
-                
-                }
 
             }
 
@@ -138,11 +173,23 @@
 
             }
 
-            /*  On screens 
-                that are less than 400px,
-                display the bar vertically, instead of horizontally */
+            /*  than 400px,
+                display the bar vertically,
+            */
             @media screen and (max-width: 400px) {
 
+                body {
+                    background-color: blue;
+                }
+
+                .sidenav {
+                    background-color: blue;
+                }
+
+
+                .sidenav a, .dropdown-btn {
+                    float: none;
+                    text-align: center;
             }
 
         </style>
@@ -157,12 +204,19 @@
 
 
     <body>
-    
+
+
     <div class="sidenav">
             <a href="#home" onclick="changeToActiveClass(this)">Home</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
+            <button class="dropdown-btn">Dropdown<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
     </div>
    
 
@@ -183,11 +237,62 @@
     </div>
 
 
+
+
+    <!--    https://www.w3schools.com/jsref/api_canvas.asp
+    -->
+    <canvas id="mycanvas1" class="mycanvas" width="800" height="600"></canvas>
+
+
+
+
+
+
+
+
     <script>
         function changeToActiveClass(id) {
             id.style.class = active
         }
     </script>
+
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          }
+          );
+        }
+    </script>
+
+
+    <script>
+        var c = document.getElementById("mycanvas1");
+        var ctx = c.getContext("2d");
+
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(20, 100);
+        ctx.lineTo(70, 100);
+        ctx.closePath();
+        ctx.stroke();
+
+    </script> 
+
     
     </body>
 </html>
