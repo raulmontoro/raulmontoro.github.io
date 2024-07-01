@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
-
             * {
                 box-sizing: border-box;
             }
@@ -15,8 +14,8 @@
               height: 100%;
               line-height: 1.4;
             }
-            body {
 
+            body {
 
                 /*  margin-top
                     margin-right
@@ -55,6 +54,8 @@
             .sidenav a, .dropdown-btn {
                 display: block;
 
+                font-family: "Times New Roman", Times, serif;
+
                 margin:  0;
                 padding: 0;
 
@@ -70,8 +71,10 @@
             }
              
             .sidenav a.active, .dropdown-btn.active {
-              background-color: lightgrey;
-              color: black;
+                font-family: "Times New Roman", Times, serif;
+                background-color: lightgrey;
+
+                color: black;
             }
 
             .sidenav a:hover:not(.active), .dropdown-btn.active:hover:not(.active) {
@@ -100,7 +103,12 @@
            
 
             .mycanvas {
-                border: 1px solid;
+                position:absolute; 
+                position:relative; 
+                top:    75px; 
+                left:   200px;
+
+                border: 5px solid;
             }
 
 
@@ -250,6 +258,8 @@
 
 
 
+    <!--
+    -->
     <script>
         function changeToActiveClass(id) {
             id.style.class = active
@@ -257,25 +267,37 @@
     </script>
 
 
+
+    <!--    dropdown events 
+            Loop through all dropdown buttons 
+            to toggle between hiding and showing 
+            its dropdown content.
+            This allows the user to have 
+            multiple dropdowns without any conflict
+    -->
     <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var dropdown = document.getElementsByClassName("dropdown-btn");
         var i;
-        for (i = 0; i < dropdown.length; i++) {
-          dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-              dropdownContent.style.display = "none";
-            } else {
-              dropdownContent.style.display = "block";
-            }
-          }
-          );
+        for (i=0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener
+            (
+                "click", 
+                function() {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } 
+                    else {
+                        dropdownContent.style.display = "block";
+                    }
+                }
+            );
         }
     </script>
 
-
+    <!--    canvas drawing
+    -->
     <script>
         var c = document.getElementById("mycanvas1");
         var ctx = c.getContext("2d");
