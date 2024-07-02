@@ -24,6 +24,7 @@
                 */
                 margin: 10% 10% 10% 10%;
                 font-family: "Times New Roman", Times, serif;
+                background-color: Chocolate;
             }
             
             .sidenav {
@@ -50,6 +51,11 @@
                 for buttom with same text style
                 buttom is in a class div
                 https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+            */
+
+            /*  symbol identities
+                https://www.w3schools.com/html/html_symbols.asp
+
             */
             .sidenav a, .dropdown-btn {
                 display: block;
@@ -105,10 +111,34 @@
             .mycanvas {
                 position:absolute; 
                 position:relative; 
-                top:    75px; 
-                left:   200px;
+                top:    0px; 
+                left:   0px;
 
                 border: 5px solid;
+            }
+
+
+
+            .newspaper {
+                column-count: 2;
+                column-width: 100%;
+                column-gap: 40px;
+                column-fill: balance;
+            
+                column-rule-width: 1px;
+                column-rule-style: none;
+                column-rule-style: solid;
+                column-rule-color: black;
+                column-rule: 1px solid black;
+            }
+            .newspaper h1 {
+                column-span: all;
+                text-align: center;
+                color:black;
+            }
+            .newspaper h2, h3, h3 {
+                column-span: 1;
+                color:black;
             }
 
 
@@ -131,11 +161,11 @@
             }
 
                 body {
-                    background-color: red;
+                    background-color: Chocolate;
                 }
 
                 .sidenav {
-                    background-color: red;
+                    background-color: Chocolate;
                 }
 
             /* Medium devices (landscape tablets, 768px and up) */
@@ -219,7 +249,7 @@
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
-            <button class="dropdown-btn">Dropdown<i class="fa fa-caret-down"></i></button>
+            <button class="dropdown-btn">Dropdown &darr; &#9660; &#128899;<i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-container">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
@@ -229,27 +259,200 @@
    
 
 
-    <div class="main">
-            <h2>Responsive Sidebar. Media Queries.</h2>
-            <p>Transform the sidenav to a top navigation bar when the screen size is 700px or less.</p>
-            <p>We have also added a media query for screens that are 400px or less, which will vertically stack and center the navigation links.</p>
-            <h3>Resize the browser window to see the effect.</h3>
-
-            <h2>Auto Sidebar</h2>
-            <p>This sidenav is as tall as its content (the links), and is always shown.</p>
-            <p>Scroll down the page to see the result.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-    </div>
 
 
-
-
-    <!--    https://www.w3schools.com/jsref/api_canvas.asp
+    <!--
     -->
-    <canvas id="mycanvas1" class="mycanvas" width="800" height="600"></canvas>
+    <div class="main">
+
+
+        <!--
+        -->
+        <div> 
+            <h1>Lorem Ipsum Dolor Sit Amet.</h1>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h2>Lorem Ipsum Dolor Sit Amet.</h2>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h3>Resize the browser window to see the effect.</h3>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h4>Resize the browser window to see the effect.</h4>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            $$ {J(\theta) =\frac{1}{2m} [\sum^m_{i=1}(h_\theta(x^{(i)}) - y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j} $$
+        </div>
+        
+        
+
+
+        <!--
+        -->
+        <div> 
+            <h1>Lorem Ipsum Dolor Sit Amet.</h1>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h2>Lorem Ipsum Dolor Sit Amet.</h2>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h3>Resize the browser window to see the effect.</h3>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+
+            <h4>Resize the browser window to see the effect.</h4>
+            <p> Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, 
+                altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+                Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.
+            </p>
+        </div>
+
+
+
+        <!--
+        -->
+        <div class="newspaper">
+
+            <h1>SOFTWARE ENGINEERING</h1>
+            <h1>Full-Stack Development</h1>
+            <h1>John Doe, Department Name, John Doe, Department Name,</h1>
+            <h1>John Doe, Department Name</h1>
+            <h1>November 17, 2023</h1>
+
+            <h2>Introduction</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h3>Title</h3>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <p style="text-align:center; margin-left: 100px; margin-right: 100px;">
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Research Aims</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Results and Discussion</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Outlook</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Experimental Section</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+
+            <h2>Appendix</h2>
+
+            <p>
+                Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo,
+                maluisset concludaturque et eum, altera fabulas ut quo.Atqui causae gloriatur ius te, id agam omnis
+                evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+                voluptatibus.
+            </p>
+            <h2>References</h2>
+        </div>
+
+
+
+        
+
+        <!--    https://www.w3schools.com/jsref/api_canvas.asp
+        -->
+        <div>
+            <canvas id="mycanvas1" class="mycanvas" width="800" height="600"></canvas>
+        </div>
+
+    
+
+
+
+
+    </div>
+    <!--
+    -->
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
@@ -314,7 +517,10 @@
         ctx.stroke();
 
     </script> 
-
+    
+    <!--    latex
+    -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     
     </body>
 </html>
